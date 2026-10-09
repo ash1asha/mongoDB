@@ -1,0 +1,56 @@
+// Step 1: Display all databases
+show dbs
+
+// Step 2: Create or switch to the library database
+use library
+
+// Step 3: Create the books collection
+db.createCollection("books")
+
+// Step 4: Insert sample documents
+db.books.insertMany([
+    {
+        title: "1984",
+        author: "George Orwell",
+        year: 1949,
+        genre: "Dystopian",
+        price: 12.99
+    },
+    {
+        title: "To Kill a Mockingbird",
+        author: "Harper Lee",
+        year: 1960,
+        genre: "Fiction",
+        price: 14.99
+    },
+    {
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald",
+        year: 1925,
+        genre: "Classic",
+        price: 10.99
+    },
+    {
+        title: "Moby Dick",
+        author: "Herman Melville",
+        year: 1851,
+        genre: "Adventure",
+        price: 9.99
+    },
+    {
+        title: "Brave New World",
+        author: "Aldous Huxley",
+        year: 1932,
+        genre: "Dystopian",
+        price: 11.99
+    }
+])
+
+// Step 5: Display all collections
+show collections
+
+// Step 6: Drop the books collection
+db.books.drop()
+
+// Step 7: Drop the library database
+db.dropDatabase()
